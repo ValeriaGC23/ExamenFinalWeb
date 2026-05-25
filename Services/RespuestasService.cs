@@ -19,6 +19,10 @@ namespace ExamenFinalWeb.Services
             await _context.SaveChangesAsync();
             return r;
         }
+        public async Task<Respuestas> GetByIdAsync(int id)
+        {
+            return await _context.Respuesta.FindAsync(id);
+        }
     }
 
 }
